@@ -4,26 +4,29 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import ButtonSignin from "./ButtonSignin";
 import logo from "@/app/icon.png";
 import config from "@/config";
 
 const links = [
-  {
-    href: "/#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "/#testimonials",
-    label: "Reviews",
-  },
-  {
-    href: "/#faq",
-    label: "FAQ",
-  },
+  // {
+  //   href: "/#pricing",
+  //   label: "Pricing",
+  // },
+  // {
+  //   href: "/#testimonials",
+  //   label: "Reviews",
+  // },
+  // {
+  //   href: "/#faq",
+  //   label: "FAQ",
+  // },
 ];
 
-const cta = <ButtonSignin extraStyle="btn-primary" />;
+const cta =  <a href="https://calendly.com/brightertunnel/1-hr-technical-coding-interview" target="_blank" rel="noopener noreferrer" className="block">
+<button className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none transition duration-300 ease-in-out transform hover:-translate-y-1">
+  Book You Interview
+</button>
+</a>;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
