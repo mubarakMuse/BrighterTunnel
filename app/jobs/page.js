@@ -67,7 +67,48 @@ const jobSites = [
   "https://boards.greenhouse.io/vgw",
   "https://boards.greenhouse.io/whatnot",
   "https://boards.greenhouse.io/zscaler",
-  "https://boards.greenhouse.io/zynga"
+  "https://boards.greenhouse.io/zynga", 
+  "https://jobs.ashbyhq.com/cointracker",
+  "https://jobs.ashbyhq.com/flashbots.net",
+  "https://jobs.ashbyhq.com/moderntreasury",
+  "https://jobs.ashbyhq.com/notable",
+  "https://jobs.ashbyhq.com/oneapp",
+  "https://jobs.ashbyhq.com/OpenSea",
+  "https://jobs.ashbyhq.com/openstore",
+  "https://jobs.ashbyhq.com/peek",
+  "https://jobs.ashbyhq.com/permitflow",
+  "https://jobs.ashbyhq.com/Replo",
+  "https://jobs.ashbyhq.com/sift",
+  "https://jobs.lever.co/angel",
+  "https://jobs.lever.co/AngleHealth",
+  "https://jobs.lever.co/Anthropic",
+  "https://jobs.lever.co/atomic",
+  "https://jobs.lever.co/AviveSolutions",
+  "https://jobs.lever.co/bonusly",
+  "https://jobs.lever.co/boxcast",
+  "https://jobs.lever.co/brightwheel",
+  "https://jobs.lever.co/brillio-2",
+  "https://jobs.lever.co/businesswire",
+  "https://jobs.lever.co/Chord",
+  "https://jobs.lever.co/cortex",
+  "https://jobs.lever.co/empower.me",
+  "https://jobs.lever.co/entrata",
+  "https://jobs.lever.co/floqast",
+  "https://jobs.lever.co/gravie",
+  "https://jobs.lever.co/hallow",
+  "https://jobs.lever.co/includedhealth",
+  "https://jobs.lever.co/ionicpartners",
+  "https://jobs.lever.co/lyrahealth",
+  "https://jobs.lever.co/matchgroup",
+  "https://jobs.lever.co/owner",
+  "https://jobs.lever.co/plaid",
+  "https://jobs.lever.co/postera",
+  "https://jobs.lever.co/provi",
+  "https://jobs.lever.co/revinate",
+  "https://jobs.lever.co/scribd",
+  "https://jobs.lever.co/Terraformation",
+  "https://jobs.lever.co/vida",
+  "https://jobs.lever.co/windfalldata"
 ];
 
 
@@ -77,8 +118,8 @@ const JobBoardPage = () => {
           <Header/>
 
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Software Engineer Job Board</h1>
-      <h1 className="text-1xl \ text-center mb-6">Regularly Updated List of Active Hiring Opportunities</h1>
+      <h1 className="text-3xl font-bold text-center mb-6">Actively Hiring Companies</h1>
+      <h1 className="text-1xl text-center mb-6">We only list companies that actully get back to you after applying</h1>
 
       <div className="overflow-x-auto">
         <table className="table table-zebra">
