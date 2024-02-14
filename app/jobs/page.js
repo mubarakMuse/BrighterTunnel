@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import React from 'react';
 
@@ -107,6 +106,18 @@ const JobBoardPage = () => {
     <Footer/>
     </>
 
+  );
+
+  const Footer = () => (
+    <footer className="bg-white shadow-lg">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex flex-col items-center">
+          <p className="text-gray-500 text-sm text-center">
+            © 2024 Brighter Tunnel. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 };
 

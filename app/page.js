@@ -52,7 +52,7 @@ const InterviewPrep = () => {
                     <Card
                       title="Active Job Openings"
                       description="Browse through the latest job openings in the software industry. [Free]"
-                      href="http://brigherTunnel.com/jobs"
+                      href="https://brightertunnel.com/jobs"
                       text=" Browse Jobs"
                     />
                   </div>

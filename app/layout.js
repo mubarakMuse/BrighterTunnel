@@ -24,6 +24,23 @@ export default function RootLayout({ children }) {
       {config.domainName && (
         <head>
           <PlausibleProvider domain={config.domainName} />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-5J2L99EF3R', {
+                  page_path: window.location.pathname,
+                });
+                `,
+            }}
+          />
         </head>
       )}
       <body>
