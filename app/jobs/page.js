@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import React from 'react';
 
@@ -107,8 +108,9 @@ const JobBoardPage = () => {
     </>
 
   );
+};
 
-  const Footer = () => (
+const Footer = () => (
     <footer className="bg-white shadow-lg">
       <div className="container mx-auto px-6 py-4">
         <div className="flex flex-col items-center">
@@ -119,6 +121,4 @@ const JobBoardPage = () => {
       </div>
     </footer>
   );
-};
-
 export default JobBoardPage;
