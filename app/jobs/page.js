@@ -1,5 +1,6 @@
-import Header from '@/components/Header';
-import React from 'react';
+"use client";
+import Header from "@/components/Header";
+import React, { useEffect, useState } from "react";
 
 const jobSites = [
   "https://boards.greenhouse.io/airship",
@@ -67,7 +68,7 @@ const jobSites = [
   "https://boards.greenhouse.io/vgw",
   "https://boards.greenhouse.io/whatnot",
   "https://boards.greenhouse.io/zscaler",
-  "https://boards.greenhouse.io/zynga", 
+  "https://boards.greenhouse.io/zynga",
   "https://jobs.ashbyhq.com/cointracker",
   "https://jobs.ashbyhq.com/flashbots.net",
   "https://jobs.ashbyhq.com/moderntreasury",
@@ -108,57 +109,108 @@ const jobSites = [
   "https://jobs.lever.co/scribd",
   "https://jobs.lever.co/Terraformation",
   "https://jobs.lever.co/vida",
-  "https://jobs.lever.co/windfalldata"
+  "https://jobs.lever.co/windfalldata",
 ];
 
-
 const JobBoardPage = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 3000); // Delay of 3 seconds
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
-          <Header/>
+      <Header />
 
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Actively Hiring Companies</h1>
-      <h1 className="text-1xl text-center mb-6">We only list companies that actully get back to you after applying</h1>
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-xl">
+            <h2 className="text-2xl font-bold mb-4">
+              Ace Your Next Technical Interview
+            </h2>
+            <p className="mb-4">
+              Landing an interview is super hard, let us help you make the most
+              out of it.
+            </p>
+            <div className="flex justify-around">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://calendly.com/brightertunnel/1-hr-technical-coding-interview"
+                  );
+                  handleCloseModal(); // Optionally close modal after clicking 'Book Now'
+                }}
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Learn More
+              </button>
+              <button
+                onClick={handleCloseModal}
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
+              >
+                No Thanks
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      <div className="container mx-auto p-4">
+        <h1 className="text-3xl font-bold text-center mb-6">
+          Actively Hiring Companies
+        </h1>
+        <h1 className="text-1xl text-center mb-6">
+          We only list companies that actully get back to you after applying
+        </h1>
 
-      <div className="overflow-x-auto">
-        <table className="table table-zebra">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Job Site URL</th>
-            </tr>
-          </thead>
-          <tbody>
-            {jobSites.map((url, index) => (
-              <tr key={index}>
-                <th>{index + 1}</th>
-                <td>
-                  <a href={url} target="_blank" rel="noopener noreferrer" className="link link-hover">
-                    {url}
-                  </a>
-                </td>
+        <div className="overflow-x-auto">
+          <table className="table table-zebra">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Job Site URL</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {jobSites.map((url, index) => (
+                <tr key={index}>
+                  <th>{index + 1}</th>
+                  <td>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link link-hover"
+                    >
+                      {url}
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
-
   );
 };
 
 const Footer = () => (
-    <footer className="bg-white shadow-lg">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex flex-col items-center">
-          <p className="text-gray-500 text-sm text-center">
-            © 2024 Brighter Tunnel. All rights reserved.
-          </p>
-        </div>
+  <footer className="bg-white shadow-lg">
+    <div className="container mx-auto px-6 py-4">
+      <div className="flex flex-col items-center">
+        <p className="text-gray-500 text-sm text-center">
+          © 2024 Brighter Tunnel. All rights reserved.
+        </p>
       </div>
-    </footer>
-  );
+    </div>
+  </footer>
+);
 export default JobBoardPage;
