@@ -128,7 +128,6 @@ const JobBoardPage = () => {
   return (
     <>
       <Header />
-
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-xl">
@@ -136,7 +135,7 @@ const JobBoardPage = () => {
               Ace Your Next Technical Interview
             </h2>
             <p className="mb-4">
-              Landing an interview is super hard, let us help you make the most
+              Landing an interview is super hard; let us help you make the most
               out of it.
             </p>
             <div className="flex justify-around">
@@ -145,7 +144,7 @@ const JobBoardPage = () => {
                   window.open(
                     "https://calendly.com/brightertunnel/1-hr-technical-coding-interview"
                   );
-                  handleCloseModal(); // Optionally close modal after clicking 'Book Now'
+                  handleCloseModal();
                 }}
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
               >
